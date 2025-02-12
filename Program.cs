@@ -52,16 +52,31 @@
             Console.WriteLine("1. ASCII Art Drawing 2. Knock Knock Joke 3. Regular Jokes");
             userChoice = Convert.ToInt32(Console.ReadLine());
             if (userChoice == 1)
+            {
+                Console.WriteLine();
+            }
+            if (userChoice == 2) 
+            {
+                 KnockKnock();
+            }
+            if(userChoice == 3)
+            {
+                Console.WriteLine("Press ENTER for a joke:");
+                Console.ReadLine();
+                Joke();
 
-            Console.WriteLine("Press ENTER for a joke:");
-            Console.ReadLine();
-            Joke();
+                Console.WriteLine();
+                Console.WriteLine("For another joke, please enter a random number of your liking:");
+                Int32.TryParse(Console.ReadLine(), out userNum);
+                Console.WriteLine();
+                Joke(userNum);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
 
-            Console.WriteLine();
-            Console.WriteLine("For another joke, please enter a random number of your liking:");
-            Int32.TryParse(Console.ReadLine(), out userNum);
-            Console.WriteLine();
-            Joke(userNum);
+           
         }
     }
 }
