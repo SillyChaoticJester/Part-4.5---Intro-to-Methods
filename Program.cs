@@ -20,17 +20,21 @@
             Thread.Sleep(500);
             Console.WriteLine($"Fix a bug, run it again,");
             Thread.Sleep(500);
-            Console.WriteLine($"{numBugs++} little bugs in the code.");
+            Console.WriteLine((numBugs + 1) + " little bugs in the code.");
         }
         static void Main(string[] args)
         {
+            int userNum;
+            
             Console.WriteLine("Press ENTER for a joke:");
             Console.ReadLine();
             Joke();
 
-            Console.WriteLine("Press ENTER for another joke:");
-            Console.ReadLine();
-            Joke(50);
+            Console.WriteLine();
+            Console.WriteLine("For another joke, please enter a random number of your liking:");
+            Int32.TryParse(Console.ReadLine(), out userNum);
+            Console.WriteLine();
+            Joke(userNum);
         }
     }
 }
