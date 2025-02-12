@@ -36,12 +36,23 @@
         }
         public static void KnockKnock()
         {
-
+            Console.WriteLine("When prompted, press ENTER to continue:");
+            Console.WriteLine("Knock knock?");
+            Console.ReadLine();
+            Console.WriteLine("Owls.");
+            Console.ReadLine();
+            Console.WriteLine("Yes, owls do hoo, good job!");
         }
         static void Main(string[] args)
         {
             int userNum;
+            int userChoice;
             
+            Console.WriteLine("Which of the following would you like to do?");
+            Console.WriteLine("1. ASCII Art Drawing 2. Knock Knock Joke 3. Regular Jokes");
+            userChoice = Convert.ToInt32(Console.ReadLine());
+            if (userChoice == 1)
+
             Console.WriteLine("Press ENTER for a joke:");
             Console.ReadLine();
             Joke();
