@@ -22,6 +22,22 @@
             Thread.Sleep(500);
             Console.WriteLine((numBugs + 1) + " little bugs in the code.");
         }
+        public static void DrawBear()
+        {
+            Console.Write("  ___\r\n{~._.~}\r\n ( Y )\r\n()~*~()\r\n(_)-(_)");
+        }
+        public static void DrawCrown()
+        {
+            Console.Write("  _.+._\r\n     (^\\/^\\/^)\r\n      \\@*@*@/\r\n      {_____}");
+        }
+        public static void DrawBee()
+        {
+            Console.Write("    _  _\r\n   | )/ )\r\n\\\\ |//,' __\r\n(\")(_)-\"()))=-\r\n   (\\\\");
+        }
+        public static void KnockKnock()
+        {
+
+        }
         static void Main(string[] args)
         {
             int userNum;
