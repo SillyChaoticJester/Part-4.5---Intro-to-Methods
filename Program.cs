@@ -28,7 +28,7 @@
         }
         public static void DrawCrown()
         {
-            Console.Write("  _.+._\r\n     (^\\/^\\/^)\r\n      \\@*@*@/\r\n      {_____}");
+            Console.Write("       _.+._\r\n     (^\\/^\\/^)\r\n      \\@*@*@/\r\n      {_____}");
         }
         public static void DrawBee()
         {
@@ -47,19 +47,38 @@
         {
             int userNum;
             int userChoice;
-            
-            Console.WriteLine("Which of the following would you like to do?");
+            string artChoice;
+
+            Console.WriteLine("Which of the following would you like to do? (Pick the Number for It)");
             Console.WriteLine("1. ASCII Art Drawing 2. Knock Knock Joke 3. Regular Jokes");
             userChoice = Convert.ToInt32(Console.ReadLine());
             if (userChoice == 1)
             {
-                Console.WriteLine();
+                Console.WriteLine("What type of art would you like to print out?");
+                Console.WriteLine("Bear - Crown - Bee");
+                artChoice = Console.ReadLine();
+                if (artChoice == "Bear" || artChoice == "bear")
+                {
+                    DrawBear();
+                }
+                else if (artChoice == "Crown" || artChoice == "crown")
+                {
+                    DrawCrown();
+                }
+                else if (artChoice == "Bee" || artChoice == "bee")
+                {
+                    DrawBee();
+                }
+                else
+                {
+                    Console.WriteLine("That is not an option.");
+                }
             }
-            if (userChoice == 2) 
+            else if (userChoice == 2) 
             {
                  KnockKnock();
             }
-            if(userChoice == 3)
+            else if(userChoice == 3)
             {
                 Console.WriteLine("Press ENTER for a joke:");
                 Console.ReadLine();
@@ -73,7 +92,7 @@
             }
             else
             {
-                Console.WriteLine();
+                Console.WriteLine("That's not an option.");
             }
 
            
